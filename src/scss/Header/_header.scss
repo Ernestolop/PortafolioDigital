@@ -1,0 +1,60 @@
+@use 'base/variables' as v;
+
+.header{
+    background-color: v.$azul0;
+    text-align: center;
+    padding-block-start: v.$gap50;
+    padding-block-end: (v.$gap50)*2;
+    color: v.$celeste-claro;
+    &__container{
+        width: 80%;
+        max-width: v.$desktop;
+        margin-inline: auto;
+    }
+    &__saludo{
+        margin: 0 auto;
+        font-size: v.$font-size-xl;
+        width: 10ch;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: escribir 3s steps(10) , cursor .3s infinite;
+    }
+    &__h1{
+        margin-block: v.$gap20;
+        color: v.$azul0;
+        animation: mostrar 3s 4s forwards;
+    }
+    &__dev{
+        margin: 0;
+        font-size: v.$font-size-xl;
+        color: v.$azul0;
+        animation: mostrar 3s 6s forwards;
+    }
+}
+
+//clase extra para removerla con javascript
+.borde{
+    border-inline-end: 3px solid v.$negro;
+}
+
+@keyframes escribir {
+    0% {
+        width: 0;
+    }
+    100%{
+        width: 10ch;
+    }
+}
+@keyframes cursor {
+    50%{border-color: transparent;}
+}
+
+@keyframes mostrar {
+    0% {
+        color: v.$azul0;
+    }
+    100%{
+        color: v.$celeste-claro;
+    }
+}
+

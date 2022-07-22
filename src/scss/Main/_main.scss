@@ -1,0 +1,34 @@
+@use 'base/variables' as v;
+
+.main{
+    background-color: v.$azul0;
+    margin-top: -(v.$gap50);
+    padding-top: v.$gap50*2;
+    position: relative;
+    z-index: 0;
+    color: v.$blanco;
+    padding-block-end: v.$gap50;
+    &__container{
+        width: 80%;
+        max-width: v.$desktop;
+        margin-inline: auto;
+        padding-block-end: v.$gap50;
+    }
+    &__h2{
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: v.$gap10;
+        &::before{
+            content: '';
+            display: block;
+            width: 5px;
+            height: 40px;
+            background-color: v.$verde;
+        }
+    }
+    &__invitation{
+        margin: 0;
+    }
+}
+

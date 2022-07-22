@@ -1,0 +1,30 @@
+@use 'base/variables' as v;
+
+.footer{
+    background-color: v.$azul0;
+    padding-block-end: v.$gap50 ;
+    &__container{
+        width: 80%;
+        max-width: v.$desktop;
+        margin-inline: auto;
+        background-color: v.$blanco;
+        text-align: center;
+        padding-block: v.$gap20;
+    }
+    &__text{
+        margin-block-start: 0;
+        font-weight: 700;
+    }
+    &__nav{
+        margin-inline: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: v.$gap20;
+        list-style-type: style color;
+    }
+    &__link img{
+        height: v.$gap30;
+        width: v.$gap30;
+    }
+}

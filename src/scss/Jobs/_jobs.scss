@@ -1,0 +1,55 @@
+@use 'base/variables' as v;
+
+.jobs{
+    margin-block-start: v.$gap50;
+    display: flex;
+    flex-direction: column;
+    gap: v.$gap20;
+    @media (min-width: v.$tablet) {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 2;
+        background-image: url(../img/linea.png);
+        background-repeat-x: no-repeat;
+        background-position: center;
+    }
+    &__apps{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        background-color: v.$celeste-claro;
+    }
+    &__static{
+        grid-column: 2/3;
+        grid-row: 2/3;
+        background-color: v.$celeste-claro;
+    }
+    &__heading{
+        display: flex;
+        gap: v.$gap5;
+        background-color: v.$verde;
+        align-items: center;
+        padding-inline: v.$gap10;
+        height: 59px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    &__h3{
+        font-weight: 700;
+    }
+    &__list{
+        margin: v.$gap20 auto ;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: v.$gap20;
+        justify-content: center;
+        color: v.$negro
+    }
+}
+
+.ocultar{
+    height: 59px;
+    overflow: hidden;
+}

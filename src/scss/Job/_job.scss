@@ -1,0 +1,78 @@
+@use 'base/variables' as v;
+
+.job{
+    background-color: v.$blanco;
+    &__link{
+        position: relative;
+        &:hover{
+            &::after{
+               content: '';
+               width: 100%; 
+               height: 100%;
+               position: absolute; 
+               background-color: rgba(0,0,0, .5);
+               left: 0;
+               top: 0;
+            }
+            &::before{
+                content: 'Visitar';
+                color: v.$blanco;
+                z-index: 1;
+                width: 20px; 
+                height: 20px;
+                position: absolute; 
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+            }
+        }
+    }
+    &__img{
+        border: 1px solid v.$azul0;
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: v.$gap10;
+        justify-content: space-between;
+        padding-inline: v.$gap10;
+        @media (min-width: v.$desktop) {
+            flex-direction: row;
+            padding-block: v.$gap20;
+        }
+    }
+    &__h4{
+        text-transform: uppercase;
+        margin-block-end : 0;
+        @media (min-width: v.$desktop) {
+            margin : 0;
+        }
+    }
+    &__details{
+        display: flex;
+        align-items: flex-start;
+        gap: v.$gap10;
+        @media (min-width: v.$desktop) {
+            align-items: center;
+        }
+    }
+    &__type{
+        font-size: v.$font-size-md;
+        border-radius: 5px;
+        color: v.$blanco;
+        padding: 0 v.$gap5 ;
+        margin-block-start: 0;
+        @media (min-width: v.$desktop) {
+            margin : 0;
+        }
+    }
+    &__type--app{
+        background-color: v.$verde;
+    }
+    &__type--prototipo{
+        background-color: v.$rojo;
+    }
+}
