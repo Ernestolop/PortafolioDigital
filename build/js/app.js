@@ -19,11 +19,11 @@ let ocultarStatics = true;
 headingApps.addEventListener('click' , () => {
     if (ocultarApps) {
         desplegableApps.classList.remove('ocultar');
-        arrowImgApps.src = '/build/img/boxicons/bxs-down-arrow.svg';
+        arrowImgApps.src = 'img/boxicons/bxs-down-arrow.svg';
         ocultarApps = !ocultarApps;
     } else {
         desplegableApps.classList.add('ocultar');
-        arrowImgApps.src = '/build/img/boxicons/bxs-right-arrow.svg';
+        arrowImgApps.src = 'img/boxicons/bxs-right-arrow.svg';
         ocultarApps = !ocultarApps;
     }
 });
@@ -31,11 +31,11 @@ headingApps.addEventListener('click' , () => {
 headingStatics.addEventListener('click' , () => {
     if (ocultarStatics) {
         desplegableStatics.classList.remove('ocultar');
-        arrowImgStatics.src = '/build/img/boxicons/bxs-down-arrow.svg';
+        arrowImgStatics.src = 'img/boxicons/bxs-down-arrow.svg';
         ocultarStatics = !ocultarStatics;
     } else {
         desplegableStatics.classList.add('ocultar');
-        arrowImgStatics.src = '/build/img/boxicons/bxs-right-arrow.svg';
+        arrowImgStatics.src = 'img/boxicons/bxs-right-arrow.svg';
         ocultarStatics = !ocultarStatics;
     }
 });
