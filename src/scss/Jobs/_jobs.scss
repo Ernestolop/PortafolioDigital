@@ -45,7 +45,9 @@
         align-items: center;
         gap: v.$gap20;
         justify-content: center;
-        color: v.$negro
+        color: v.$negro;
+        list-style: none;
+        padding: 0;
     }
 }
 
